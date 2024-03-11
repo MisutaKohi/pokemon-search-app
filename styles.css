@@ -24,6 +24,13 @@ body {
   box-shadow: 10px 10px rgb(174, 172, 177);
 }
 
+/* Helper classes */
+
+.error-msg {
+  text-align: center;
+  color: red;
+}
+
 /* User input section */
 
 label {
