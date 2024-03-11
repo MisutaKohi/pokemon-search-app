@@ -10,6 +10,7 @@ const specialAttackStat = document.getElementById('sp-attack');
 const specialDefenseStat = document.getElementById('sp-defense');
 const speedStat = document.getElementById('speed');
 
+
 const search = (userInput) => {
   
   if (userInput.includes("♂")) {
@@ -42,6 +43,15 @@ const search = (userInput) => {
     displayContainer.innerHTML = `<p style='font-size: 18px'>${name.toUpperCase()} #${number}</p>`;
     displayContainer.innerHTML += `<p style='font-size: 14px'>Weight: ${weight} Height: ${height}</p>`;
     displayContainer.innerHTML += `<img src='${img_url}'>`;
+    displayContainer.innerHTML += `<div id='pokemon-types'></div>`;
+
+    const pokemonTypesSection = document.getElementById('pokemon-types');
+    pokemonTypesSection.style.display = "flex";
+
+    for (const type of data.types) {
+      pokemonTypesSection.innerHTML += `<span class='pokemon-type ${type.type.name}'>${type.type.name.toUpperCase()}</span>`;
+    }
+    // console.log(data.types.length);
     
     hpStat.textContent = data.stats[0].base_stat;
     attackStat.textContent = data.stats[1].base_stat;

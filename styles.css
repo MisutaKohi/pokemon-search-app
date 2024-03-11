@@ -31,6 +31,15 @@ body {
   color: red;
 }
 
+.pokemon-type {
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 66px;
+  text-align: center;
+}
+
 /* User input section */
 
 label {
@@ -116,4 +125,82 @@ td, th {
   color: white; 
   text-align: center;
   margin-bottom: 5px;
+}
+
+/* Pokemon type classes */
+
+.normal {
+  background-color: rgb(168, 168, 125);
+}
+
+.fire {
+  background-color: rgb(225 , 134, 68);
+}
+
+.water {
+  background-color: rgb(112, 144, 233);
+}
+
+.electric {
+  background-color: rgb(242, 209, 84);
+}
+
+.grass {
+  background-color: rgb(139, 198, 96);
+}
+
+.ice  {
+  background-color: rgb(166, 214, 215);
+}
+
+.fighting {
+  background-color: rgb(177, 61, 49);
+}
+
+.poison {
+  background-color: rgb(148, 70, 155);
+}
+
+.ground {
+  background-color: rgb(219, 193, 117);
+}
+
+.flying {
+  background-color: rgb(164, 145, 234);
+}
+
+.psychic {
+  background-color: rgb(230, 99, 136);
+}
+
+.bug {
+  background-color: rgb(171, 183, 66);
+}
+
+.rock {
+  background-color: rgb(180, 161, 75);
+}
+
+.ghost {
+  background-color: rgb(108, 89, 148);
+}
+
+.dragon {
+  background-color: rgb(105, 59, 239);
+}
+
+.dark {
+  background-color: rgb(108, 89, 74);
+}
+
+.steel {
+  background-color: rgb(284, 184, 206);
+}
+
+.fairy {
+  background-color: rgb(231, 184, 189);
+}
+
+.stellar {
+  background-color: rgb(90, 270, 226);
 }
