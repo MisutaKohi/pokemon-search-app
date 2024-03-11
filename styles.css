@@ -2,7 +2,7 @@
   --main-background-color: rgb(27, 27, 48);
   --main-container-color: rgb(245, 246, 247);
   --display-background: rgb(225, 226, 231);
-  --purple-accent-color: rgb(117, 41, 165);
+  --purple-accent-color: rgb(117, 41, 164);
 }
 
 body {
@@ -61,14 +61,43 @@ button:hover {
 #pokemon-display {
   background-color: var(--display-background);
   width: 425px;
-  height: 325px;
+  height: 300px;
 }
 
 /* Stats Display */
 
 #stats-display {
-  border: 1px red solid;
   width: 425px;
-  height: 300px;
+  height: 340px;
   margin-top: 10px;
+  box-sizing: border-box;
+}
+
+table {
+  width: 435px;
+  margin-left: -5px;
+}
+
+tr {
+  margin-bottom: 10px;
+}
+
+td, th {
+  padding: 12px;
+}
+
+.type {
+  width: 60%;
+  background-color: var(--purple-accent-color);
+  color: white;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.value {
+  width: 20%;
+  background-color: var(--purple-accent-color);
+  color: white; 
+  text-align: center;
+  margin-bottom: 5px;
 }
