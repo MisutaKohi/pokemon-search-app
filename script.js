@@ -27,9 +27,22 @@ const search = (userInput) => {
   fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${userInput}`)
   .then((res) => res.json())
   .then((data) => {
+    displayContainer.innerHTML = ``;
+
     console.log(data);
+
+    const name = data.name;
+    const number = data.id;
+
+    const height = data.height;
+    const weight = data.weight;
+
+    const img_url = data.sprites.front_default;
+
+    displayContainer.innerHTML = `<p style='font-size: 18px'>${name.toUpperCase()} #${number}</p>`;
+    displayContainer.innerHTML += `<p style='font-size: 14px'>Weight: ${weight} Height: ${height}</p>`;
+    displayContainer.innerHTML += `<img src='${img_url}'>`;
     
-    // console.log(data.stats[0].base_stat);
     hpStat.textContent = data.stats[0].base_stat;
     attackStat.textContent = data.stats[1].base_stat;
     defenseStat.textContent = data.stats[2].base_stat;

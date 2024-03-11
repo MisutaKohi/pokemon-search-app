@@ -2,7 +2,7 @@
   --main-background-color: rgb(27, 27, 48);
   --main-container-color: rgb(245, 246, 247);
   --display-background: rgb(225, 226, 231);
-  --purple-accent-color: rgb(117, 41, 164);
+  --purple-accent-color: rgb(119, 38, 170);
 }
 
 body {
@@ -69,6 +69,15 @@ button:hover {
   background-color: var(--display-background);
   width: 425px;
   height: 300px;
+}
+
+#pokemon-display > p {
+  margin-left: 10px;
+}
+
+#pokemon-display > img {
+  margin-left: 125px;
+  height: 175px;
 }
 
 /* Stats Display */
