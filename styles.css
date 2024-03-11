@@ -1,9 +1,74 @@
 :root {
   --main-background-color: rgb(27, 27, 48);
   --main-container-color: rgb(245, 246, 247);
-  --purple-theme-color: rgb(116, 41, 165);
+  --display-background: rgb(225, 226, 231);
+  --purple-accent-color: rgb(117, 41, 165);
 }
 
 body {
   background-color: var(--main-background-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+.main-container {
+  background-color: var(--main-container-color);
+  width: 475px;
+  height: 775px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 10px 10px rgb(174, 172, 177);
+}
+
+/* User input section */
+
+label {
+  margin-top: 20px;
+  font-size: 18px;;
+}
+
+#user-input {
+  height: 75px;
+}
+
+#user-input > input {
+  margin-top: 15px;
+  height: 35px;
+  width: 200px;
+}
+
+button {
+  width: 90px;
+  height: 42px;
+  border-radius: 20px;
+  background-color: var(--purple-accent-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: goldenrod;
+}
+
+/* Pokemon display */
+
+#pokemon-display {
+  background-color: var(--display-background);
+  width: 425px;
+  height: 325px;
+}
+
+/* Stats Display */
+
+#stats-display {
+  border: 1px red solid;
+  width: 425px;
+  height: 300px;
+  margin-top: 10px;
 }
