@@ -1,0 +1,9 @@
+:root {
+  --main-background-color: rgb(27, 27, 48);
+  --main-container-color: rgb(245, 246, 247);
+  --purple-theme-color: rgb(116, 41, 165);
+}
+
+body {
+  background-color: var(--main-background-color);
+}
