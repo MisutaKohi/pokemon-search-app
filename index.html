@@ -11,12 +11,15 @@
     <div class="main-container">
       <label for="search-bar">Search for Pokémon Name or ID:</label>
       <div id="user-input">
-        <input type="text" id="search-bar">
-        <button id="search-btn">Search</button>
+        <input type="text" id="search-input" required>
+        <button id="search-button">Search</button>
       </div>
       
       <div id="pokemon-display">
-        
+        <p class="hidden"><span id="pokemon-name"></span> #<span id="pokemon-id"></span></p>
+        <p class="hidden">Weight: <span id="weight"></span> Height: <span id="height"></span></p>
+        <img class="hidden" id="sprite">
+        <div class="hidden" id="types"></div>
       </div>
 
       <div id="stats-display">
@@ -39,11 +42,11 @@
           </tr>
           <tr>
             <td class="type">Sp. Attack:</td>
-            <td class="value"><span id="sp-attack"></span></td>
+            <td class="value"><span id="special-attack"></span></td>
           </tr>
           <tr>
             <td class="type">Sp. Defense:</td>
-            <td class="value"><span id="sp-defense"></span></td>
+            <td class="value"><span id="special-defense"></span></td>
           </tr>
           <tr>
             <td class="type">Speed:</td>

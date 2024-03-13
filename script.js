@@ -1,13 +1,13 @@
-const searchBtn = document.getElementById('search-btn');
-const userInput = document.getElementById('search-bar');
+const searchBtn = document.getElementById('search-button');
+const userInput = document.getElementById('search-input');
 
 const displayContainer = document.getElementById('pokemon-display');
 
 const hpStat = document.getElementById('hp');
 const attackStat = document.getElementById('attack');
 const defenseStat = document.getElementById('defense');
-const specialAttackStat = document.getElementById('sp-attack');
-const specialDefenseStat = document.getElementById('sp-defense');
+const specialAttackStat = document.getElementById('special-attack');
+const specialDefenseStat = document.getElementById('special-defense');
 const speedStat = document.getElementById('speed');
 
 
@@ -28,9 +28,6 @@ const search = (userInput) => {
   fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${userInput}`)
   .then((res) => res.json())
   .then((data) => {
-    displayContainer.innerHTML = ``;
-
-    console.log(data);
 
     const name = data.name;
     const number = data.id;
@@ -40,18 +37,23 @@ const search = (userInput) => {
 
     const img_url = data.sprites.front_default;
 
-    displayContainer.innerHTML = `<p style='font-size: 18px'>${name.toUpperCase()} #${number}</p>`;
-    displayContainer.innerHTML += `<p style='font-size: 14px'>Weight: ${weight} Height: ${height}</p>`;
-    displayContainer.innerHTML += `<img src='${img_url}'>`;
-    displayContainer.innerHTML += `<div id='pokemon-types'></div>`;
+    document.getElementById('pokemon-name').textContent = name.toUpperCase();
+    document.getElementById('pokemon-id').textContent = number;
+    document.getElementById('sprite').src = img_url;
+    document.getElementById('height').textContent = height;
+    document.getElementById('weight').textContent = weight;
 
-    const pokemonTypesSection = document.getElementById('pokemon-types');
+    for (const child of displayContainer.children) {
+      child.classList.remove('hidden');
+    }
+
+    const pokemonTypesSection = document.getElementById('types');
+    document.getElementById('types').innerHTML = ``;
     pokemonTypesSection.style.display = "flex";
 
     for (const type of data.types) {
       pokemonTypesSection.innerHTML += `<span class='pokemon-type ${type.type.name}'>${type.type.name.toUpperCase()}</span>`;
     }
-    // console.log(data.types.length);
     
     hpStat.textContent = data.stats[0].base_stat;
     attackStat.textContent = data.stats[1].base_stat;
