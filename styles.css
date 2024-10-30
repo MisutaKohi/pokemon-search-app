@@ -57,8 +57,10 @@ label {
 
 #user-input > input {
   margin-top: 15px;
-  height: 35px;
-  width: 200px;
+  height: 25px;
+  width: 190px;
+  padding: 10px;
+  font-size: 18px;
 }
 
 button {
